@@ -23,7 +23,8 @@ rentals(
   has_pic = FALSE,
   posted_today = FALSE,
   pets_cat = FALSE,
-  pets_dog = FALSE
+  pets_dog = FALSE,
+  progress_bar = TRUE
 )
 }
 \arguments{

@@ -14,7 +14,8 @@ Imports:
     xml2,
     RCurl,
     tibble,
-    lubridate
+    lubridate,
+    progress
 Depends:
   R (>= 3.2.3),
   magrittr
