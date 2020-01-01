@@ -67,7 +67,8 @@ get_query <- function(query, type = "apa") {
     locale <- na_error({
       post %>%
         rvest::html_node(".result-hood") %>%
-        rvest::html_text()
+        rvest::html_text() %>%
+        str_squish()
     })
 
     ## Post bedrooms and sqft (returns NA if an error is generated)
