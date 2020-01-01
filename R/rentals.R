@@ -50,7 +50,7 @@ rentals <- function(location = "seattle", area = "all", base_url = NULL,
                     search_distance = NULL, bedrooms = NULL, bathrooms = NULL,
                     min_price = NULL, max_price = NULL, min_sqft = NULL,
                     max_sqft = NULL, has_pic = FALSE, posted_today = FALSE,
-                    pets_cat = FALSE, pets_dog = FALSE) {
+                    pets_cat = FALSE, pets_dog = FALSE, progress_bar = TRUE) {
   ## Preliminary input checks -----
   # Generate the base url based on specified location and area and make sure
   # it exists
@@ -148,6 +148,9 @@ rentals <- function(location = "seattle", area = "all", base_url = NULL,
   num_pages <- ceiling(tot_results / 100) - 1
 
   # Go through each page of craigslist using a loop
+  if (progress_bar) {
+    bar <- progress::progress_bar$new(total = num_pages+1)
+  }
   for (i in 0:num_pages)
   {
     if (i == 0) {
@@ -169,6 +172,7 @@ rentals <- function(location = "seattle", area = "all", base_url = NULL,
       ## Bind the results from each page
       all_results <- rbind(all_results, query_results)
     }
+    if (progress_bar) {bar$tick()}
   }
 
   # Generate output file if desired
