@@ -9,11 +9,12 @@ Description: This package allows you to query craigslist using the same search
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
-  rvest,
-  stringr,
-  xml2,
-  RCurl
+    rvest,
+    stringr,
+    xml2,
+    RCurl,
+    tibble
 Depends:
   R (>= 3.2.3),
   magrittr
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2

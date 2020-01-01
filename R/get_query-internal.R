@@ -97,14 +97,16 @@ get_query <- function(query, type = "apa")
   locales <- stringr::str_replace_all(locales, "[\\)\\()]", "")
 
 
-  ## Bind the data
-  clean_data <- data.frame(Title    = titles,
-                           Date     = dates,
-                           Price    = prices,
-                           Bedrooms = beds,
-                           SqFt     = sqfts,
-                           Location = locales,
-                           URL      = urls)
+## Bind the data
+clean_data <- tibble::tibble(
+  title = titles,
+  date = dates,
+  price = prices,
+  bedrooms = beds,
+  sqft = sqfts,
+  location = locales,
+  url = urls
+)
 
   return(clean_data)
 }

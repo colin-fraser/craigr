@@ -4,12 +4,27 @@
 \alias{rentals}
 \title{List Available Rentals}
 \usage{
-rentals(location = "seattle", area = "all", base_url = NULL,
-  detailed = FALSE, output = NULL, max_results = 2500, query = NULL,
-  postal = NULL, search_distance = NULL, bedrooms = NULL,
-  bathrooms = NULL, min_price = NULL, max_price = NULL, min_sqft = NULL,
-  max_sqft = NULL, has_pic = FALSE, posted_today = FALSE,
-  pets_cat = FALSE, pets_dog = FALSE)
+rentals(
+  location = "seattle",
+  area = "all",
+  base_url = NULL,
+  detailed = FALSE,
+  output = NULL,
+  max_results = 2500,
+  query = NULL,
+  postal = NULL,
+  search_distance = NULL,
+  bedrooms = NULL,
+  bathrooms = NULL,
+  min_price = NULL,
+  max_price = NULL,
+  min_sqft = NULL,
+  max_sqft = NULL,
+  has_pic = FALSE,
+  posted_today = FALSE,
+  pets_cat = FALSE,
+  pets_dog = FALSE
+)
 }
 \arguments{
 \item{location}{Character vector containing the region to look in. Matches
@@ -73,5 +88,4 @@ specifications
 \examples{
 
 rentals(location = "seattle", area = "see", bedrooms = 5, query = "downtown")
-
 }
