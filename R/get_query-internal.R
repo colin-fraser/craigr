@@ -28,7 +28,7 @@ get_query <- function(query, type = "apa") {
   prices <- numeric()
   dates <- lubridate::ymd_hm()
   urls <- character()
-  locals <- character()
+  locales <- character()
   beds <- numeric()
   sqfts <- numeric()
 
